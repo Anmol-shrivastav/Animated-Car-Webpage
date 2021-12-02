@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+     <title>Car Level_2</title>
+     <link rel="icon" href="images/logo.jpg">
+     <style type="text/css">
+	   *{
+		   padding:0;
+		   margin:0;
+	   }
+	   .sky {
+		   height:100vh;
+		   width:100%;
+		   background-image:url("images/sky.jpg");
+		   background-size:cover;
+		   background-position:center;
+		   position:relative;
+		   overflow-x:hidden;
+	   }
+	   .road {
+		   height:200px;
+		   width:500%;
+		   display:block;
+		   background-image:url("images/road.jpg");
+		   position:absolute;
+		   bottom:0;
+		   left:0;
+		   right:0;
+		   z-index:1;
+		   background-repeat:repeat-x;
+		   animation: road 10s linear infinite;
+	   }
+	   @keyframes road {
+		   100% {
+			   transform:translateX(-100%);
+		   }
+	   }
+	   
+	   .city {
+		   background-image:url("images/city.png");
+		   height:250px;
+		   width:500%;
+		   position:absolute;
+		   bottom:200px;
+		   left:0;
+		   right:0;
+		   display:block;
+		   z-index:1;
+		   background-repeat:repeat-x;
+		   animation: city 30s linear infinite;
+	   }
+	   @keyframes city {
+		   100%{
+			   transform:translateX(-100%);
+		   }
+	   }
+	   .car {
+		   weight:300px;
+		   left:50%;
+		   bottom:0;
+		   position: absolute;
+		   z-index:2;
+		   transform:translateX(-50%);
+	   }
+	   .car img{
+		   width:500px;
+		   animation: car 1s linear infinite;
+	   }
+	   @keyframes car {
+		   100%{
+			   transform:translateY(-1px);
+		   }
+		   50%{
+			   transform:translateY(1px);
+		   }
+		   0%{
+			   transform:translateY(-1px);
+		   }
+			   
+	   }
+	   .wheel {
+		   left:50%;
+		   bottom:178px;
+		   position:absolute;
+		   z-index:2;
+		   transform:translateX(-50%);
+		    
+	   }
+	   .wheel img {
+		   width:85px;
+		   height: 85px;
+		   animation:wheel 2s linear infinite;
+		  
+	   }
+	   .left-wheel {
+		   left:-205px;
+		   top:73px;
+		   position:absolute;
+	   }
+	   @keyframes wheel {
+		   100%{
+			   transform:rotate(360deg);
+		   }
+	   }
+	   .right-wheel {
+		   left:103px;
+		   top:74px;
+		   position:absolute;
+	   }
+		   
+	   
+	 </style>
+  </head>
+  <body>
+     <div class="sky">
+        <div class="road"></div>
+        <div class="city"></div>
+          <div class="car">
+           <img src="images/car.png">
+          </div>
+          <div class="wheel">
+            <img src="images/wheel.png" class="left-wheel">
+            <img src="images/wheel.png" class="right-wheel">
+            
+          </div> <!--wheel div -->
+     </div>
+  </body>
+</html>
